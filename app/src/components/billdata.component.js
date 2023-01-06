@@ -91,8 +91,8 @@ function CustomerReport() {
 }
 
 function BillData() {
-    const [reportEnable, setReportEnable] = React.useState(); // to add default value use -> React.useState(true)
-    setReportEnable(true);
+    const [reportEnable, setReportEnable] = React.useState(true); // to add default value use -> React.useState(true)
+
 
     return (
         <>
