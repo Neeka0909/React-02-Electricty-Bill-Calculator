@@ -1,3 +1,4 @@
+// React-Bootstrap components are imported from the react-bootstrap package.
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/esm/Col';
 import Form from 'react-bootstrap/Form';

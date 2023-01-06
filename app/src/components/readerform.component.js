@@ -11,19 +11,19 @@ function ReaderForm() {
             <Col md='4'>
                 <Form className="border p-3">
                     <h3>Meater Reading Data</h3>
-                    <Form.Group controlId="formBasicEmail" className='mb-2'>
+                    <Form.Group controlId="formBasicText" className='mb-2'>
                         <Form.Label>Customer Account Number</Form.Label>
                         <Form.Control type="text" placeholder="Enter Customer Account Number" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword" className='mb-3'>
+                    <Form.Group controlId="formBasicDate" className='mb-3'>
                         <Form.Label>Date</Form.Label>
                         <Form.Control type="date" min={Date()} placeholder="Date" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicEmail" className='mb-2'>
+                    <Form.Group controlId="formBasicNumber" className='mb-2'>
                         <Form.Label>Meater Reading</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Customer Meter Reading" />
+                        <Form.Control type="Number" placeholder="Enter Customer Meter Reading" />
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
