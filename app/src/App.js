@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import MainNavbar from './components/navbar.component';
 import BillData from './components/billdata.component';
-import Reader from './components/reader.component';
+import Reader from './components/readerlogin.component';
 
 
 function App() {
