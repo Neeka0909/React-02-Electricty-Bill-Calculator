@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({
-    accNumber: { type: String, required: true },
+    acc_number: { type: String, required: true },
     name: { type: String, required: true }
 }, {
     timestamps: true,

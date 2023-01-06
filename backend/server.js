@@ -11,14 +11,13 @@ const uri = process.env.ATLAS_URI;
 
 //routes
 const publicRouter = require('./routes/customer.route');
-// const categoryRouter = require('./routes/category');
-// const subCategoryRouter = require('./routes/subCategory');
-
+const readerRouter = require('./routes/reader.route');
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 app.use('/customer', publicRouter);
+app.use('/reader', readerRouter);
 
 // establish connection to database
 mongoose.connect(uri);
