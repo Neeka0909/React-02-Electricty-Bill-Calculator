@@ -1,3 +1,5 @@
 Mongodb
 username - CEBtest
 password - 2v2JC7RTiSsBaQdb
+
+mongodb+srv://CEBtest:2v2JC7RTiSsBaQdb@cluster0.jxp5dfl.mongodb.net/test

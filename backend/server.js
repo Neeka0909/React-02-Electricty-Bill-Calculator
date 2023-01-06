@@ -9,12 +9,16 @@ const port = process.env.PORT || 3500
 require('dotenv').config();
 const uri = process.env.ATLAS_URI;
 
-
+//routes
+const publicRouter = require('./routes/customer.route');
+// const categoryRouter = require('./routes/category');
+// const subCategoryRouter = require('./routes/subCategory');
 
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use('/customer', publicRouter);
 
 // establish connection to database
 mongoose.connect(uri);
