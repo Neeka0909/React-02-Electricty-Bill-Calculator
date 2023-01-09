@@ -3,12 +3,14 @@ let Bill = require('../model/bill.model');
 
 //bill add route
 router.route('/add').post((req, res) => {
-    const accNumber = req.body.accNumber;
+    console.log("request body: ", req.body)
+
+    const acc_number = req.body.acc_number;
     const date = req.body.date;
     const reading = req.body.reading;
 
     const newBill = new Bill({
-        accNumber,
+        acc_number,
         date,
         reading
     });
@@ -20,8 +22,14 @@ router.route('/add').post((req, res) => {
 });
 
 //bill get route
-router.route('/bill/:id').get((req, res) => {
+router.route('/data/:id').get((req, res) => {
     Bill.find({ acc_number: req.params.id })
+        .then(results => res.json(results))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/').get((req, res) => {
+    Bill.find()
         .then(results => res.json(results))
         .catch(err => res.status(400).json('Error: ' + err));
 });

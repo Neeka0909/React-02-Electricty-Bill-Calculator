@@ -26,6 +26,7 @@ router.route('/add').post((req, res) => {
 
 //customers get route
 router.route('/acc/:id').get((req, res) => {
+    console.log(req.params.id);
     Reader.find({ userID: req.params.id })
         .then(results => res.json(results))
         .catch(err => res.status(400).json('Error: ' + err));

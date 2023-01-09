@@ -17,14 +17,16 @@ function ReaderLogin() {
     const DataSubmit = (data) => {
         console.log(data.userName);
         const id = data.userName;
-
+        console.log(id);
         axios.get("http://localhost:3500/reader/acc/" + id)
             .then((res) => {
-                console.log(">>>" + res.data);
                 setReader(res.data);
-                console.log(reader[0].Password);
-                console.log(data.password)
-                if (reader[0].Password === data.password) {
+                const storedPassword = res.data[0].Password;
+                console.log(reader);
+                const givenPassword = data.password;
+                //const storedPassword = reader[0].Password;
+
+                if (storedPassword === givenPassword) {
                     alert("Login Successful");
                     window.location.replace('http://localhost:3000/readerform');
                 } else {
